@@ -1,84 +1,76 @@
-HELP.md
+############################
+# Maven
+############################
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+!.mvn/wrapper/maven-wrapper.jar
 
-
-./src/main/resources/application.properties
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+############################
+# IntelliJ IDEA
+############################
+.idea/
 *.iml
-*.ipr
 
-### NetBeans ###
+############################
+# Eclipse
+############################
+.project
+.classpath
+.settings/
+
+############################
+# VS Code
+############################
+.vscode/
+
+############################
+# NetBeans
+############################
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
-
-
-# ==========================
-# Maven
-# ==========================
-target/
-
-# ==========================
-# IntelliJ IDEA
-# ==========================
-.idea/
-*.iml
-out/
-
-# ==========================
-# VS Code
-# ==========================
-.vscode/
-
-# ==========================
-# Eclipse
-# ==========================
-.project
-.classpath
-.settings/
-
-# ==========================
-# Logs
-# ==========================
-*.log
-
-# ==========================
+############################
 # OS Files
-# ==========================
+############################
 .DS_Store
 Thumbs.db
 
-# ==========================
-# Environment Variables
-# ==========================
+############################
+# Logs
+############################
+*.log
+logs/
+
+############################
+# Environment Files
+############################
 .env
 .env.*
+!.env.example
 
-# ==========================
-# Local Secrets
-# ==========================
+############################
+# Application Secrets (Optional)
+############################
 application-local.properties
-application.properties
+application-dev.properties
+application-prod.properties
+
+############################
+# Temporary Files
+############################
+*.tmp
+*.temp
+*.swp
+*~
+
+############################
+# Java
+############################
+*.class
+
+############################
+# Generated Files
+############################
+dependency-reduced-pom.xml
