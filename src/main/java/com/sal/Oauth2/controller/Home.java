@@ -1,5 +1,6 @@
 package com.sal.Oauth2.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
@@ -18,6 +19,10 @@ public class Home {
 
     @GetMapping("/")
     public String goHome(@AuthenticationPrincipal OAuth2User user, Model model, Authentication authentication){
+
+
+
+
 
         user.getAttributes().forEach((k,v) ->
                 System.out.println(k + " : " + v));

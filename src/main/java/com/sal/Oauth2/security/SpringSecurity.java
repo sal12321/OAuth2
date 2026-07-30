@@ -13,17 +13,19 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SpringSecurity {
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
-        
-        http.
-                authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-                .oauth2Login(oauth -> oauth.defaultSuccessUrl("/", true));
+            http.
+                    authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
 
-        
-        
-        
-        return http.build();
+                    .oauth2Login(oauth -> oauth.defaultSuccessUrl("/", true));
+
+
+
+
+            return http.build();
+
+
 
     }
 }
