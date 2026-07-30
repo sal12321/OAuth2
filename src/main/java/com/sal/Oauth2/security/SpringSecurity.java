@@ -15,15 +15,16 @@ public class SpringSecurity {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-            http.
-                    authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
+//            http.
+//                    authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
+//
+//                    .oauth2Login(oauth -> oauth.defaultSuccessUrl("/", true));
 
-                    .oauth2Login(oauth -> oauth.defaultSuccessUrl("/", true));
+        http
+                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
 
-
-
-
-            return http.build();
+        return http.build();
+        
 
 
 
