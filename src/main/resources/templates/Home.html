@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+
+</head>
+<body>
+
+<div class="container">
+    <h1> Login Successful</h1>
+    <div class = "userinfo">
+    <h3>Name: <span th:text = "${name}"> </span></h3>
+    <h3>Mail: <span th:text = "${email}"> </span></h3>
+        <h3>
+            Auth Provider:
+            <span th:text="${provider}"></span>
+            <img th:src="@{/images/{logo}.png(logo=${provider.toLowerCase()})}"
+                 alt="Provider Logo"
+                 class="provider-logo"  >
+
+        </h3>
+
+
+        <h3> Profile Image </h3>
+        <div id = "profile">
+            <img th:src = "${picture}" onerror="this.src='/images/alt.png'" >
+        </div>
+    <p>Spring Boot OAuth2</p>
+
+        </div>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+    function logout() {
+        window.location.href = "/logout";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+/mvnw text eol=lf
+*.cmd text eol=crlf
+
+./src/main/resources/application.properties
+# ==========================
+# Maven
+# ==========================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.properties
+
+# ==========================
+# IntelliJ IDEA
+# ==========================
+.idea/
+*.iml
+out/
+
+# ==========================
+# Eclipse
+# ==========================
+.project
+.classpath
+.settings/
+.factorypath
+
+
+
+# ==========================
+# NetBeans
+# ==========================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Environment Variables
+# ==========================
+.env
+.env.*
+
+# ==========================
+# Secrets
+# ==========================
+application-local.properties
+application-local.yml
+application.properties
+
+
+
+
+# ==========================
+# Generated Files
+# ==========================
+*.class
+
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.swp

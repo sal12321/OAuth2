@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 350px;
+    height : 80vh;
+
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.userinfo {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.userinfo h3,
+.userinfo h2 {
+    margin: 12px 0;
+    color: #444;
+    font-weight: 500;
+}
+
+.provider-logo {
+    width: auto;
+    height: 50px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+p {
+    margin-top: 15px;
+    color: #777;
+    font-size: 14px;
+}
+
+button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    background: limegreen ;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: teal;
+}
+
+#profile {
+height : auto;
+display : flex;
+    margin: 15px 0;
+    text-align: center;
+
+
+}
+
+#profile img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
