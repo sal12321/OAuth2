@@ -1,6 +1,8 @@
 package com.sal.Oauth2.security;
 
 import org.apache.catalina.filters.HttpHeaderSecurityFilter;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -25,8 +27,18 @@ public class SpringSecurity {
 
         return http.build();
 
-
-
-
     }
+
+    @Bean
+    CommandLineRunner test(
+            @Value("${GOOGLE_CLIENT_ID:NOT_FOUND}") String googleId,
+            @Value("${GITHUB_CLIENT_ID:NOT_FOUND}") String githubId) {
+
+        return args -> {
+            System.out.println("GOOGLE_CLIENT_ID = " + googleId);
+            System.out.println("GITHUB_CLIENT_ID = " + githubId);
+        };
+    }
+
+
 }
