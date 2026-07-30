@@ -39,9 +39,5 @@ public class Home {
 
         return "Home" ;
     }
-//    @GetMapping("/fuck")
-//
-//    public String fuck(){
-//        return "fuck you" ;
-//    }
+
 }
